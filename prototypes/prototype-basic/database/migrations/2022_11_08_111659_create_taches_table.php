@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('taches', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->dateTime('date_debut');
+            $table->dateTime('date_fin');
+            $table->longText('description');
+            $table->foreignId('brief_id')->constrained();
             $table->timestamps();
         });
     }

@@ -42,13 +42,14 @@ class TacheController extends Controller
         //     'phone' => 'required',
         // ]);
         $tache = Tache::find($id);
-        $tache->firstName = $request->get('first_name');
-        $tache->lastName = $request->get('last_name');
-        $tache->email = $request->get('email');
+        $tache->nom_tache = $request->get('nom_tache');
+        $tache->date_debut = $request->get('date_debut');
+        $tache->date_fin = $request->get('date_fin');
+        $tache->description = $request->get('description');
         
         $tache->save();
 
-        return redirect('/edit' . "/" . $tache->promotionId);
+        return redirect('/edit' . "/" . $tache->brief_id);
     }
 
     public function destroy($id)

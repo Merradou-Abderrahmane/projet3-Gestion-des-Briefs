@@ -15,13 +15,15 @@
 <body>
     <div class="addStudent-page">
         <div class="form">
-          <form action="/student/update/{{ $student->id }}" method="POST" class="login-form">
+          <form action="/tache/update/{{ $tache->id }}" method="POST" class="login-form">
             @csrf
-             <input type="text" placeholder="First Name" value="{{$student->firstName}}" name="first_name"><br> <br>
-             <input type="text" placeholder="Last Name" value="{{$student->lastName}}" name="last_name"><br> <br> 
-             <input type="text" placeholder="Email" value="{{$student->email}}" name="email"><br> <br>
+             <input type="text" value="{{$tache->nom_tache}}" name="nom_tache"><br> <br>
+              {{-- edit date and description --}}
+              <input type="datetime-local" value="{{$tache->date_debut}}" name="date_debut"><br> <br>
+              <input type="datetime-local" value="{{$tache->date_fin}}" name="date_fin"><br> <br>
+              <input type="text" placeholder="Description" value="{{$tache->description}}" name="description"><br> <br>
+            <button type="submit">update</button>
              {{-- <input type="hidden" value="{{$id}}"  name="id"> --}}
-             <button type="submit">edit</button>
             </form>
         </div>
       </div>

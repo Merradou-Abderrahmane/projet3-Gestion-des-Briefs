@@ -12,21 +12,21 @@ class BriefController extends Controller
     {
         $briefs = Brief::all();
         // compact('Brief') is the same as ['briefs' => $briefs]
-        return view('index', ['briefs' => $briefs]);
+        return view('brief/index', ['briefs' => $briefs]);
     }
 
     public function create()
     {
-        return view('addBrief');
+        return view('brief/addBrief');
     }
 
     public function store(Request $request)
     {
         $brief = new Brief();
-        $brief->briefName = $request->briefName;
+        $brief->brief_nom = $request->brief_nom;
         $brief->save();
         // return redirect('/');
-        return redirect('index');
+        return redirect('brief/index');
     }
 
     public function edit($id)

@@ -22,7 +22,7 @@
              <input type="datetime-local" name="date_fin"><br> <br>
               <input type="text" placeholder="Description" name="description"><br> <br>
              <input type="hidden" value="{{$id}}"  name="id">
-            <button type="submit">add</button>
+            <button type="submit">Ajouter</button>
           </form>
         </div>
       </div>

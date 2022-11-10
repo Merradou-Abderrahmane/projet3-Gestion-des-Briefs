@@ -9,13 +9,19 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
+<link rel="stylesheet" href="{{asset('css/student.css')}}">
 </head>
 <body>
-    <form  action="/update/{{ $brief->id }}" method="POST">
+    <h1 id="add-title"> Modifier Brief</h1>
+    <form class="form"  action="/update/{{ $brief->id }}" method="POST">
         @csrf
-        <label for="briefName"> Nom de Brief</label> <input type="text" class="add-box" name="brief_nom" value="{{$brief->brief_nom}}"><br>
+        <input type="text" class="add-box" name="brief_nom" value="{{$brief->brief_nom}}"><br>
+        <input type="datetime-local" name="date_livraison" value="{{$brief->date_livraison}}"><br>
+        <input type="datetime-local" name="date_recuperation" value="{{$brief->date_recuperation}}"><br>
         <button id="button-add" type="submit">Editer</button>
     </form>
+    <h1 id="add-title">👨🏻‍🎓 Gestion des taches</h1>
+
 <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
@@ -51,7 +57,7 @@
             </table>
             <div class="clearfix">
                 {{-- <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div> --}}
-                <a href={{url("tache/addTache/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
+                <a href={{url("tache/addTache/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Tache </a>
             </div>
         </div>
     </div>  

@@ -15,5 +15,10 @@ class Tache extends Model
         'description',
         'brief_id'
     ];
+    // define relationship with brief
+    public function brief()
+    {
+        return $this->belongsTo(Brief::class);
+    }
     
 }

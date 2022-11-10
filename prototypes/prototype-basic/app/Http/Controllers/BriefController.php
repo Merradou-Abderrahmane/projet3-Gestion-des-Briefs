@@ -25,6 +25,8 @@ class BriefController extends Controller
     {
         $brief = new Brief();
         $brief->brief_nom = $request->brief_nom;
+        $brief->date_livraison = $request->date_livraison;
+        $brief->date_recuperation = $request->date_recuperation;
         $brief->save();
         return redirect('index');
     }
@@ -43,7 +45,9 @@ class BriefController extends Controller
     {
         $brief = Brief::find($id);
         $brief->brief_nom = $request->input('brief_nom');
-        $brief->update();
+        $brief->date_livraison = $request->input('date_livraison');
+        $brief->date_recuperation = $request->input('date_recuperation');
+        $brief->save();
         // $Brief->save();
         return redirect('index');    }
 
@@ -54,4 +58,3 @@ class BriefController extends Controller
         return redirect('index');
     }
 }
-

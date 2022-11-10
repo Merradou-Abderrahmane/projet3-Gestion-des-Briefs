@@ -13,4 +13,9 @@ class Brief extends Model
         'date_livraison',
         'date_recuperation',
     ];    
+    // define relationship with tache
+    public function taches()
+    {
+        return $this->hasMany(Tache::class);
+    }
 }

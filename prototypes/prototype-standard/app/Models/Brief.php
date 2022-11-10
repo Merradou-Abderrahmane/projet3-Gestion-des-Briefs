@@ -18,4 +18,11 @@ class Brief extends Model
     {
         return $this->hasMany(Tache::class);
     }
+
+    // define relationship with apprenant
+    
+    public function apprenants()
+    {
+        return $this->belongsToMany(Apprenant::class);
+    }
 }

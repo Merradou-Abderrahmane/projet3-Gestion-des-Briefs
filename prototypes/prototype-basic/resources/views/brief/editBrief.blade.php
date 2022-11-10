@@ -38,7 +38,7 @@
                     </tr>
                 </thead>
                 <tbody id="results">
-                    {{-- @foreach ($taches as $tache)
+                    @foreach ($taches as $tache)
                     <tr>
                         <td>{{$tache->nom_tache}}</td>
                         <td>
@@ -46,7 +46,7 @@
                             <a href={{"/tache/delete/".$tache['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
             <div class="clearfix">

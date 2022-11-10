@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brief;
+use App\Models\Tache;
 
 class BriefController extends Controller
 {
@@ -30,11 +31,12 @@ class BriefController extends Controller
 
     public function edit($id)
     {
+        // select * from briefs where id = $id
         $brief = Brief::find($id);
-        $taches = $brief->taches;
-        // return Brief::find($id);
-                                     #compact('Brief')
-        return view('brief/editBrief', compact('brief', 'taches', 'id') );
+        // send tache to the view as well to display it in the form
+        $taches = Tache::where('brief_id', $id)->get();
+        return view('brief/editBrief', compact('brief', 'taches'));
+        
     }
 
     public function update(Request $request, $id)

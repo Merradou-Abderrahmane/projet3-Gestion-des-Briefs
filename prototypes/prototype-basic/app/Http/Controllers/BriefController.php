@@ -11,8 +11,8 @@ class BriefController extends Controller
     public function index()
     {
         $briefs = Brief::all();
-        // compact('Brief') is the same as ['briefs' => $briefs]
-        return view('brief/index', ['briefs' => $briefs]);
+        // compact('briefs') is the same as ['briefs' => $briefs]
+        return view('brief/index', compact('briefs'));
     }
 
     public function create()
@@ -25,8 +25,7 @@ class BriefController extends Controller
         $brief = new Brief();
         $brief->brief_nom = $request->brief_nom;
         $brief->save();
-        // return redirect('/');
-        return redirect('brief/index');
+        return redirect('index');
     }
 
     public function edit($id)
@@ -34,7 +33,7 @@ class BriefController extends Controller
         $brief = Brief::find($id);
         // return Brief::find($id);
                                      #compact('Brief')
-        return view('editBrief', ['brief' => $brief] );
+        return view('brief/editBrief', ['brief' => $brief] );
     }
 
     public function update(Request $request, $id)

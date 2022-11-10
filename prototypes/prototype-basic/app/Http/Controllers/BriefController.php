@@ -31,15 +31,16 @@ class BriefController extends Controller
     public function edit($id)
     {
         $brief = Brief::find($id);
+        $taches = $brief->taches;
         // return Brief::find($id);
                                      #compact('Brief')
-        return view('brief/editBrief', ['brief' => $brief] );
+        return view('brief/editBrief', compact('brief', 'taches', 'id') );
     }
 
     public function update(Request $request, $id)
     {
         $brief = Brief::find($id);
-        $brief->briefName = $request->input('briefName');
+        $brief->brief_nom = $request->input('brief_nom');
         $brief->update();
         // $Brief->save();
         return redirect('index');    }

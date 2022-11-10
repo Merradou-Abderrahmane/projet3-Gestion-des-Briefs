@@ -13,7 +13,7 @@
 <body>
     <form  action="/update/{{ $brief->id }}" method="POST">
         @csrf
-        <label for="briefName"> Nom de Brief</label> <input type="text" class="add-box" name="briefName" value="{{$brief->briefName}}"><br>
+        <label for="briefName"> Nom de Brief</label> <input type="text" class="add-box" name="brief_nom" value="{{$brief->brief_nom}}"><br>
         <button id="button-add" type="submit">Editer</button>
     </form>
 <div class="container-xl">
@@ -38,25 +38,25 @@
                     </tr>
                 </thead>
                 <tbody id="results">
-                    @foreach ($students as $student)
+                    {{-- @foreach ($taches as $tache)
                     <tr>
-                        <td>{{$student->lastName}}</td>
+                        <td>{{$tache->nom_tache}}</td>
                         <td>
-                            <a href={{"/student/edit/".$student['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href={{"/student/delete/".$student['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href={{"/tache/edit/".$tache['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href={{"/tache/delete/".$tache['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
             <div class="clearfix">
                 {{-- <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div> --}}
-                <a href={{url("student/addStudent/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
+                <a href={{url("tache/addtache/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
             </div>
         </div>
     </div>  
 </div>   
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="{{ asset('js/student.js') }}"></script>
+<script src="{{ asset('js/tache.js') }}"></script>
 </body>
 </html>

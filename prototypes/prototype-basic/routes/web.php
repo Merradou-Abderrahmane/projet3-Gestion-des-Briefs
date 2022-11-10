@@ -32,7 +32,7 @@ Route::get('delete/{id}',[BriefController::class,'destroy']);
 Route::get('search',[BriefController::class,'search']);
 
 // tache routes
-Route::get('tache/addStudent/{id}',[TacheController::class,'create']);
+Route::get('tache/addTache/{id}',[TacheController::class,'create']);
 Route::post('tache/add',[TacheController::class,'store']);
 Route::get('tache/edit/{id}',[TacheController::class,'edit']);
 Route::post('tache/update/{id}',[TacheController::class,'update']);

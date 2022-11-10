@@ -51,7 +51,7 @@
             </table>
             <div class="clearfix">
                 {{-- <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div> --}}
-                <a href={{url("tache/addtache/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
+                <a href={{url("tache/addTache/")."/".$brief->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
             </div>
         </div>
     </div>  

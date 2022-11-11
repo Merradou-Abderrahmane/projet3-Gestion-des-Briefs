@@ -10,19 +10,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('css/student.css')}}">
-    <title>Ajouter Apprenant</title>
+    <title>Modifier Apprenant</title>
 </head>
 <body>
     <div class="addStudent-page">
         <div class="form">
-          <form action="/student/add" method="POST" class="login-form">
+          <form action="/apprenant/update/{{ $student->id }}" method="POST" class="login-form">
             @csrf
-             <input type="text" placeholder="Nom apprenant" name="nom_apprenant"><br> <br>
-             <input type="text" placeholder="Prenom apprenant" name="prenom_apprenant"><br> <br> 
-             <input type="text" placeholder="Email" name="email"><br> <br>
+             <input type="text" placeholder="Nom apprenant" value="{{$student->firstName}}" name="nom_apprenant"><br> <br>
+             <input type="text" placeholder="Prenom apprenant" value="{{$student->lastName}}" name="prenom_apprenant"><br> <br> 
+             <input type="text" placeholder="Email" value="{{$student->email}}" name="email"><br> <br>
              {{-- <input type="hidden" value="{{$id}}"  name="id"> --}}
-            <button type="submit">add</button>
-          </form>
+             <button type="submit">edit</button>
+            </form>
         </div>
       </div>
 </body>

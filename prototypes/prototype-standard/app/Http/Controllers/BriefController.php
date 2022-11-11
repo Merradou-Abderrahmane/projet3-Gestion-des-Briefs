@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brief;
 use App\Models\Tache;
+use App\Models\Apprenant;
+
 
 class BriefController extends Controller
 {
@@ -57,4 +59,14 @@ class BriefController extends Controller
         $brief->delete();
         return redirect('index');
     }
+
+    // display all apprenatns in assgin breif view and comapct brief as well
+    public function assign($id)
+    {
+        $brief = Brief::find($id);
+        $apprenants = Apprenant::all();
+        return view('brief/assignBrief', compact('brief', 'apprenants'));
+    }
+
+    // assign brief to apprenant
 }

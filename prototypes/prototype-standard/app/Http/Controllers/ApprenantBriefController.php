@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\ApprenantBrief;
 use Illuminate\Http\Request;
+use App\Models\Brief;
 
 class ApprenantBriefController extends Controller
 {
     //
-    public function store(Request $request)
+    
+    public function assignBrief(Request $request)
     {
         $apprenatBrief = new ApprenantBrief();
         $apprenatBrief->apprenant_id=$request->apprenant_id;
-        $apprenatBrief->briefs_id=$request->brief_id;
+        $apprenatBrief->brief_id=$request->brief_id;
         $apprenatBrief->save();
         return back();
     }

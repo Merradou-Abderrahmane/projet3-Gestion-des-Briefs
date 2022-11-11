@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApprenantBriefController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TacheController;
 use App\Http\Controllers\BriefController;
@@ -38,3 +39,9 @@ Route::get('tache/edit/{id}',[TacheController::class,'edit']);
 Route::post('tache/update/{id}',[TacheController::class,'update']);
 Route::get('tache/delete/{id}',[TacheController::class,'destroy']);
 Route::get('tache/search',[TacheController::class,'search']);
+// apprenant routes
+Route::get('apprenant/addApprenant/{id}',[ApprenantController::class,'create']);
+// assgin brief view
+Route::get('brief/assignBrief/{id}',[BriefController::class,'assign']);
+// assign brief to apprenant
+Route::post('brief/assignBrief',[ApprenantBriefController::class,'assignBrief']);

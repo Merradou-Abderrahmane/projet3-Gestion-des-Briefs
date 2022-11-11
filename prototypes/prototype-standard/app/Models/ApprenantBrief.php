@@ -13,6 +13,6 @@ class ApprenantBrief extends Model
         'apprenant_id',
         'brief_id',
     ];
-
-    protected $table = 'apprenant_brief';
+    
+    protected $table = 'apprenants_briefs';
 }

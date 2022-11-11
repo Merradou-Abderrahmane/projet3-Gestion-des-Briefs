@@ -14,5 +14,16 @@ class ApprenantController extends Controller
         return view('apprenantbrief',compact('apprenants'));
     }
 
+    public function store(Request $request)
+    {
+        $apprenant = new Apprenant();
+        $apprenant->nom_apprenant = $request->nom_apprenant;
+        $apprenant->prenom_apprenant = $request->prenom_apprenant;
+        $apprenant->email = $request->email;
+        $apprenant->save();
+        return redirect()->back();
+    }
+
+
 
 }

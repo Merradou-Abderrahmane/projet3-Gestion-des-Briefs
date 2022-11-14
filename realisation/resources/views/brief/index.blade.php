@@ -50,7 +50,7 @@ $(document).ready(function(){
                         <td>
                             <a href={{"edit/".$brief['id']}}  class="edit" title="Edit" data-toggle="tooltip">Modifier<i></i> </a>
                             <a href={{"delete/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">Suprimmer<i></i></a>
-                            <a href={{"Assigner/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">Assigner<i></i></a>
+                            <a href={{"brief/assignBrief/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">Assigner<i></i></a>
                             <a href={{"edit/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">+Taches<i></i></a>
                         </td>
                     </tr>

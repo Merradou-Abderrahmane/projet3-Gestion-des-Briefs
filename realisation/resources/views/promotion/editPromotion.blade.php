@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="{{asset('css/promotion.css')}}">
 </head>
 <body>
+    @include('includes.header')
     <form  action="/promotion/update/{{ $promotion->id }}" method="POST">
         @csrf
         <label for="promotionName"> Nom de promotion</label> <input type="text" class="add-box" name="nom_promotion" value="{{$promotion->nom_promotion}}"><br>

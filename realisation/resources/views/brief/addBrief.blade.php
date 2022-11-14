@@ -14,7 +14,8 @@
     <title>Ajouter Brief</title>
 </head>
 <body>
-    <h1 id="add-title">➕ Ajouter Brief</h1>
+    @include('includes.header')
+    <h1 id="add-title">💻 Ajouter Brief</h1>
     <form  class="form" action="add" method="POST">
         @csrf
         <input type="text" placeholder="Nom de brief" class="add-box" name="brief_nom"><br>

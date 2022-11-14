@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Promotion extends Model
 {
     use HasFactory;
+    
+    protected $table = 'promotions';
     // define the relationship with Apprenant
     public function apprenants()
     {

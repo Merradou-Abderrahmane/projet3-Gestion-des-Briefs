@@ -45,10 +45,10 @@ $(document).ready(function(){
                 <tbody id="results">
                     @foreach ($promotions as $promotion)
                     <tr>
-                        <td>{{$promotion->promotionName}}</td>
+                        <td>{{$promotion->nom_promotion}}</td>
                         <td>
                             <a href={{"edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href={{"delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href={{"promotion/delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
                     @endforeach

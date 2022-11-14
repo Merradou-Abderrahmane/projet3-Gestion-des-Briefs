@@ -15,12 +15,12 @@
 <body>
     <div class="addStudent-page">
         <div class="form">
-          <form action="/student/add" method="POST" class="login-form">
+          <form action="/apprenant/add" method="POST" class="login-form">
             @csrf
              <input type="text" placeholder="Nom apprenant" name="nom_apprenant"><br> <br>
              <input type="text" placeholder="Prenom apprenant" name="prenom_apprenant"><br> <br> 
              <input type="text" placeholder="Email" name="email"><br> <br>
-             {{-- <input type="hidden" value="{{$id}}"  name="id"> --}}
+             <input type="text" value="{{$id}}"  name="promotion_id">
             <button type="submit">add</button>
           </form>
         </div>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TacheController;
 use App\Http\Controllers\BriefController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\ApprenantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,7 @@ Route::get('promotion/edit/{id}',[PromotionController::class,'show']);
 Route::post('promotion/update/{id}',[PromotionController::class,'update']);
 Route::get('promotion/delete/{id}',[PromotionController::class,'destroy']);
 Route::get('promotion/search',[PromotionController::class,'search']);
+// apprenant routes
+Route::get('apprenant',[ApprenantController::class,'index']); // later
+Route::get('apprenant/addApprenant',[ApprenantController::class,'create']);
+Route::post('apprenant/add',[ApprenantController::class,'store']);

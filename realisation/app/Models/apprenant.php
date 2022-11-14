@@ -15,6 +15,13 @@ class Apprenant extends Model
         'email',
     ];
 
+    // define the relationship with Promotion
+
+    public function promotion()
+    {
+        return $this->belongsTo(Promotion::class);
+    }
+
     public function briefs()
     {
         return $this->belongsToMany(Brief::class);

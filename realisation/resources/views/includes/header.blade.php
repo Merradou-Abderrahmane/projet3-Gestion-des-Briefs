@@ -13,7 +13,7 @@
                 <a class="nav-link active" aria-current="page" href={{url("index/")}}>Home 🏠</a>
                 <a class="nav-link active" aria-current="page" href={{url("index/")}}>Apprenants 👨‍🎓</a>
                 <a class="nav-link active" aria-current="page" href={{url("index/")}}>Promotions 🏫</a>
-                <a class="nav-link active" aria-current="page" href={{"edit/"}}>Taches ✔️</a>
+                <a class="nav-link active" aria-current="page" href={{"index/"}}>Taches ✔️</a>
             </ul>
             <!-- Left links -->
           </div>

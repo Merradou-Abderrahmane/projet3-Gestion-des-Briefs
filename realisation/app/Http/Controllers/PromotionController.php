@@ -13,7 +13,12 @@ class PromotionController extends Controller
     public function index()
     {
         $promotions = Promotion::all();
-        return view('promotion',compact('promotions'));
+        return view('promotion/promotion',compact('promotions'));
+    }
+
+    public function create()
+    {
+        return view('/promotion/addPromotion');
     }
 
     public function store(Request $request)
@@ -21,7 +26,7 @@ class PromotionController extends Controller
         $promotion = new Promotion();
         $promotion->nom_promotion = $request->nom_promotion;
         $promotion->save();
-        return redirect()->back();
+        return redirect('/promotion');
     }
 
     public function show($id)

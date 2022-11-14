@@ -19,14 +19,14 @@ $(document).ready(function(){
 </script> --}}
 </head>
 <body>
-    <h1 id="add-title">👨🏻‍🎓 Gestion des apprenants</h1>
+    <h1 id="add-title">👨🏻‍🎓 Gestion des promotions</h1>
 
 <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Gestion des apprenants <b> Solicode</b></h2></div>
+                    <div class="col-sm-8"><h2>Gestion des promotions <b> Solicode</b></h2></div>
                     <div class="col-sm-4">
                         <div class="search-box">
                             <i class="material-icons">&#xE8B6;</i>
@@ -56,7 +56,7 @@ $(document).ready(function(){
             </table>
             <div class="clearfix">
                 {{-- <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div> --}}
-                <a href={{url("add/")}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Promotion </a>
+                <a href={{url("promotion/addPromotion")}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Promotion </a>
             </div>
         </div>
     </div>  

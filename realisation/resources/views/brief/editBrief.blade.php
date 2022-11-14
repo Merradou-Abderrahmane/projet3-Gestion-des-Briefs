@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="{{asset('css/student.css')}}">
 </head>
 <body>
+    @include('includes.header')
     <h1 id="add-title">✒️ Modifier Brief</h1>
     <form class="form"  action="/update/{{ $brief->id }}" method="POST">
         @csrf

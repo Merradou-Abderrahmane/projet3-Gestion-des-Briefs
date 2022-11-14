@@ -13,9 +13,9 @@
 </head>
 <body>
     <h1 id="add-title">➕ Ajouter Promotion</h1>
-    <form  action="add" method="POST">
+    <form  action="/promotion/add" method="POST">
         @csrf
-        <label for="promotionName"> Nom de promotion</label> <input type="text" class="add-box" name="promotionName"><br>
+        <label for="promotionName"> Nom de promotion</label> <input type="text" class="add-box" name="nom_promotion"><br>
         <button id="button-add" type="submit">Ajouter</button>
     </form>
 </body>

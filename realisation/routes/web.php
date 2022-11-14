@@ -4,6 +4,7 @@ use App\Http\Controllers\ApprenantBriefController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TacheController;
 use App\Http\Controllers\BriefController;
+use App\Http\Controllers\PromotionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,11 @@ Route::get('apprenant/addApprenant/{id}',[ApprenantController::class,'create']);
 Route::get('brief/assignBrief/{id}',[BriefController::class,'assign']);
 // assign brief to apprenant
 Route::post('brief/assignBrief',[ApprenantBriefController::class,'assignBrief']);
+// promotion routes
+Route::get('promotion',[PromotionController::class,'index']);
+Route::get('promotion/addPromotion',[PromotionController::class,'create']);
+Route::post('/promotion/add',[PromotionController::class,'store']);
+Route::get('promotion/edit/{id}',[PromotionController::class,'edit']);
+Route::post('promotion/update/{id}',[PromotionController::class,'update']);
+Route::get('promotion/delete/{id}',[PromotionController::class,'destroy']);
+Route::get('promotion/search',[PromotionController::class,'search']);

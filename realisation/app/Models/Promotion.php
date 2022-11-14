@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Promotion extends Model
 {
     use HasFactory;
+    // define the relationship with Apprenant
+    public function apprenants()
+    {
+        return $this->hasMany(Apprenant::class);
+    }
+    
+    protected $fillable = ['nom_promotion'];
 }

@@ -50,7 +50,7 @@ Route::post('brief/assignBrief',[ApprenantBriefController::class,'assignBrief'])
 Route::get('promotion',[PromotionController::class,'index']);
 Route::get('promotion/addPromotion',[PromotionController::class,'create']);
 Route::post('/promotion/add',[PromotionController::class,'store']);
-Route::get('promotion/edit/{id}',[PromotionController::class,'edit']);
+Route::get('promotion/edit/{id}',[PromotionController::class,'show']);
 Route::post('promotion/update/{id}',[PromotionController::class,'update']);
 Route::get('promotion/delete/{id}',[PromotionController::class,'destroy']);
 Route::get('promotion/search',[PromotionController::class,'search']);

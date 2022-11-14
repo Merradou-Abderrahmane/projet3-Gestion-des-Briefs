@@ -47,7 +47,7 @@ $(document).ready(function(){
                     <tr>
                         <td>{{$promotion->nom_promotion}}</td>
                         <td>
-                            <a href={{"edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href={{"promotion/edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href={{"promotion/delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>

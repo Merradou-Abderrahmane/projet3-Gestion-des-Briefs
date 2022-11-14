@@ -32,7 +32,7 @@ class PromotionController extends Controller
     public function show($id)
     {
         $promotion = Promotion::find($id);
-        return view('promotion',compact('promotion'));
+        return view('promotion/editPromotion',compact('promotion'));
     }
 
     public function update(Request $request, $id)
@@ -40,7 +40,7 @@ class PromotionController extends Controller
         $promotion = Promotion::find($id);
         $promotion->nom_promotion = $request->nom_promotion;
         $promotion->save();
-        return redirect()->back();
+        return redirect('/promotion');
     }
 
     public function destroy($id)

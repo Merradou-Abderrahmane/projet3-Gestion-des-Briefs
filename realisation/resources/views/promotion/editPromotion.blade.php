@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>
-    <form  action="/update/{{ $promotion->id }}" method="POST">
+    <form  action="/promotion/update/{{ $promotion->id }}" method="POST">
         @csrf
-        <label for="promotionName"> Nom de promotion</label> <input type="text" class="add-box" name="promotionName" value="{{$promotion->promotionName}}"><br>
+        <label for="promotionName"> Nom de promotion</label> <input type="text" class="add-box" name="nom_promotion" value="{{$promotion->nom_promotion}}"><br>
         <button id="button-add" type="submit">Editer</button>
     </form>
 <div class="container-xl">
@@ -37,21 +37,21 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody id="results">
-                    @foreach ($students as $student)
+                {{-- <tbody id="results">
+                    @foreach ($promotion as $promotion)
                     <tr>
-                        <td>{{$student->lastName}}</td>
+                        <td>{{$promotion->}}</td>
                         <td>
-                            <a href={{"/student/edit/".$student['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href={{"/student/delete/".$student['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href={{"/promotion/edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href={{"/promotion/delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
             <div class="clearfix">
                 {{-- <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div> --}}
-                <a href={{url("student/addStudent/")."/".$promotion->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
+                <a href={{url("promotion/addPromotion/")."/".$promotion->id}} ><i class="fa-regular fa-square-plus"></i>+ Ajouter Apprenant </a>
             </div>
         </div>
     </div>  

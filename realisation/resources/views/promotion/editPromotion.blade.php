@@ -37,16 +37,16 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                {{-- <tbody id="results">
-                    @foreach ($promotion as $promotion)
+                <tbody id="results">
+                    @foreach ($apprenants as $apprenant)
                     <tr>
-                        <td>{{$promotion->}}</td>
+                        <td>{{$apprenant->prenom_apprenant}}</td>
                         <td>
                             <a href={{"/promotion/edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a href={{"/promotion/delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
             <div class="clearfix">

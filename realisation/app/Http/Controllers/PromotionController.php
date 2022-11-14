@@ -31,8 +31,10 @@ class PromotionController extends Controller
 
     public function show($id)
     {
+        // get apprentant that belongs to this promotion
+        $apprenants = Promotion::find($id)->apprenants;
         $promotion = Promotion::find($id);
-        return view('promotion/editPromotion',compact('promotion'));
+        return view('promotion/editPromotion',compact('promotion' , 'apprenants'));
     }
 
     public function update(Request $request, $id)

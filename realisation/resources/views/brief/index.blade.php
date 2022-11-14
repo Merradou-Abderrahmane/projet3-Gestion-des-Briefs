@@ -19,7 +19,8 @@ $(document).ready(function(){
 </script> --}}
 </head>
 <body>
-    <h1 id="add-title">👨🏻‍🎓 Gestion des briefs</h1>
+    @include('includes.header')
+    <h1 id="add-title">💻 Gestion des briefs</h1>
 
 <div class="container-xl">
     <div class="table-responsive">
@@ -47,8 +48,10 @@ $(document).ready(function(){
                     <tr>
                         <td>{{$brief->brief_nom}}</td>
                         <td>
-                            <a href={{"edit/".$brief['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href={{"delete/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href={{"edit/".$brief['id']}}  class="edit" title="Edit" data-toggle="tooltip">Modifier<i></i> </a>
+                            <a href={{"delete/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">Suprimmer<i></i></a>
+                            <a href={{"Assigner/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">Assigner<i></i></a>
+                            <a href={{"edit/".$brief['id']}} class="delete" title="Delete" data-toggle="tooltip">+Taches<i></i></a>
                         </td>
                     </tr>
                     @endforeach

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{{asset('css/student.css')}}">
 </head>
 <body>
-    <h1 id="add-title"> Modifier Brief</h1>
+    <h1 id="add-title">✒️ Modifier Brief</h1>
     <form class="form"  action="/update/{{ $brief->id }}" method="POST">
         @csrf
         <input type="text" class="add-box" name="brief_nom" value="{{$brief->brief_nom}}"><br>
@@ -20,7 +20,7 @@
         <input type="datetime-local" name="date_recuperation" value="{{$brief->date_recuperation}}"><br>
         <button id="button-add" type="submit">Editer</button>
     </form>
-    <h1 id="add-title">👨🏻‍🎓 Gestion des taches</h1>
+    <h1 id="add-title">✔️ Gestion des taches</h1>
 
 <div class="container-xl">
     <div class="table-responsive">

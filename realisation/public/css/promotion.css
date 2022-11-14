@@ -1,0 +1,12 @@
+#button-add{
+    height: 46px;
+    width: 70px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color:rgb(84, 105, 212);
+    color: #fff;
+}

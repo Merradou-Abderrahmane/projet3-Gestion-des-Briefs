@@ -42,8 +42,8 @@
                     <tr>
                         <td>{{$apprenant->prenom_apprenant}}</td>
                         <td>
-                            <a href={{"/promotion/edit/".$promotion['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a href={{"/promotion/delete/".$promotion['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a href={{"/apprenant/edit/".$apprenant['id']}}  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a href={{"/apprenant/delete/".$apprenant['id']}} class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
                     @endforeach

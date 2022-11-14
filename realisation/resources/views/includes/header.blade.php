@@ -11,8 +11,8 @@
             <!-- Left links -->
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <a class="nav-link active" aria-current="page" href={{url("index/")}}>Home 🏠</a>
-                <a class="nav-link active" aria-current="page" href={{url("index/")}}>Apprenants 👨‍🎓</a>
-                <a class="nav-link active" aria-current="page" href={{url("index/")}}>Promotions 🏫</a>
+                <a class="nav-link active" aria-current="page" href={{url("promotion/")}}>Apprenants 👨‍🎓</a>
+                <a class="nav-link active" aria-current="page" href={{url("promotion/")}}>Promotions 🏫</a>
                 <a class="nav-link active" aria-current="page" href={{"index/"}}>Taches ✔️</a>
             </ul>
             <!-- Left links -->

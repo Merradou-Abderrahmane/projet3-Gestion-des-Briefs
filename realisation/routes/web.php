@@ -59,3 +59,8 @@ Route::get('promotion/search',[PromotionController::class,'search']);
 Route::get('apprenant',[ApprenantController::class,'index']); // later
 Route::get('apprenant/addApprenant',[ApprenantController::class,'create']);
 Route::post('apprenant/add',[ApprenantController::class,'store']);
+Route::get('apprenant/edit/{id}',[ApprenantController::class,'show']);
+Route::post('apprenant/update/{id}',[ApprenantController::class,'update']);
+Route::get('apprenant/delete/{id}',[ApprenantController::class,'destroy']);
+Route::get('apprenant/search',[ApprenantController::class,'search']);
+

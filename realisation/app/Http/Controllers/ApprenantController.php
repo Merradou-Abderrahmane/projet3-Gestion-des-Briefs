@@ -35,6 +35,41 @@ class ApprenantController extends Controller
         // return redirect()->route('promotion.edit',$request->promotion_id);
      }
 
+    public function show($id)
+    {
+        // 
+        $apprenant = Apprenant::find($id);
+        return view('apprenant/editApprenant',compact('apprenant'));
+    }
+
+    public function edit($id)
+    {
+        //
+
+        
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
+        $apprenant = Apprenant::find($id);
+        $apprenant->nom_apprenant = $request->nom_apprenant;
+        $apprenant->prenom_apprenant = $request->prenom_apprenant;
+        $apprenant->email = $request->email;
+        $apprenant->save();
+        return redirect('/promotion/edit' . "/" . $apprenant->promotion_id);
+        }
+
+    public function destroy($id)
+    {
+        // delete apprenant
+        $apprenant = Apprenant::find($id);
+        $apprenant->delete();
+        return redirect()->back();
+
+    }
+
+
 
 
 }

@@ -13,6 +13,7 @@
     <title>Ajouter Apprenant</title>
 </head>
 <body>
+    @include('includes.header')
     <div class="addStudent-page">
         <div class="form">
           <form action="/apprenant/add" method="POST" class="login-form">

@@ -19,6 +19,7 @@ $(document).ready(function(){
 </script> --}}
 </head>
 <body>
+    @include('includes.header')
     <h1 id="add-title">👨🏻‍🎓 Gestion des promotions</h1>
 
 <div class="container-xl">

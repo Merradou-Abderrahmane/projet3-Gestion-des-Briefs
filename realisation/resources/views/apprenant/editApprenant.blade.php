@@ -15,12 +15,11 @@
 <body>
     <div class="addStudent-page">
         <div class="form">
-          <form action="/apprenant/update/{{ $student->id }}" method="POST" class="login-form">
+          <form action="/apprenant/update/{{ $apprenant->id }}" method="POST" class="login-form">
             @csrf
-             <input type="text" placeholder="Nom apprenant" value="{{$student->firstName}}" name="nom_apprenant"><br> <br>
-             <input type="text" placeholder="Prenom apprenant" value="{{$student->lastName}}" name="prenom_apprenant"><br> <br> 
-             <input type="text" placeholder="Email" value="{{$student->email}}" name="email"><br> <br>
-             {{-- <input type="hidden" value="{{$id}}"  name="id"> --}}
+             <input type="text" placeholder="Nom apprenant" value="{{$apprenant->nom_apprenant}}" name="nom_apprenant"><br> <br>
+             <input type="text" placeholder="Prenom apprenant" value="{{$apprenant->prenom_apprenant}}" name="prenom_apprenant"><br> <br> 
+             <input type="text" placeholder="Email" value="{{$apprenant->email}}" name="email"><br> <br>
              <button type="submit">edit</button>
             </form>
         </div>
